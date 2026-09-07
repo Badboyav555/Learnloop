@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoop | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <header class="dashboard-navbar">
+        <div class="logo">Learn<span>Loop</span></div>
+        <nav class="dashboard-nav">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="progress.html">Progress</a>
+            <a href="#" onclick="logout()" style="color:red;">Logout</a>
+        </nav>
+        <div class="profile-circle">S</div>
+    </header>
+    <main class="dashboard-container">
+        <section class="dashboard-welcome">
+            <div>
+                <p class="small-heading">YOUR LEARNING SPACE</p>
+                <h1>Good Morning, <span id="studentName">Student</span> 👋</h1>
+                <p>Ready to continue your learning journey?</p>
+            </div>
+            <div class="streak-card">
+                <div class="streak-icon">🔥</div>
+                <div><strong><span id="streakCount">0</span> Day Streak</strong><p>Keep the momentum going!</p></div>
+            </div>
+        </section>
+        <section class="stats-container">
+            <div class="stat-card"><div class="stat-icon">📚</div><div><h3>0</h3><p>Lessons Completed</p></div></div>
+            <div class="stat-card"><div class="stat-icon">🎯</div><div><h3>0%</h3><p>Quiz Accuracy</p></div></div>
+            <div class="stat-card"><div class="stat-icon">⏱️</div><div><h3>0 min</h3><p>Studied Today</p></div></div>
+        </section>
+        <section class="dashboard-grid">
+            <div class="dashboard-left">
+                <div class="dashboard-section">
+                    <div class="section-heading">
+                        <div><h2>Continue Learning</h2><p>Pick up where you left off</p></div>
+                        <a href="learn.html">View all →</a>
+                    </div>
+                    <div class="learning-card">
+                        <div class="subject-icon">📐</div>
+                        <div class="learning-info">
+                            <h3>Engineering Mathematics</h3><p>Matrices</p>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+                            <span>65% completed</span>
+                        </div>
+                        <button class="continue-learning-btn" onclick="goToLearn()">Continue →</button>
+                    </div>
+                </div>
+                <div class="dashboard-section">
+                    <div class="section-heading"><div><h2>Your Progress</h2><p>Keep improving your skills</p></div></div>
+                    <div class="subject-progress">
+                        <div class="subject-row"><div><strong>Mathematics</strong></div><span>0%</span></div>
+                        <div class="mini-progress"><div class="mini-progress-fill" style="width:0%;"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-right">
+                <div class="challenge-card">
+                    <div class="challenge-top"><span class="challenge-icon">⚡</span><span class="challenge-label">DAILY CHALLENGE</span></div>
+                    <h2>Test your knowledge</h2><p>10 questions • 5 minutes</p>
+                    <button onclick="startChallenge()">Start Challenge →</button>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-heading"><span>🤖</span><strong>AI Recommendation</strong></div>
+                    <p>You are struggling with <strong>Eigenvalues</strong>. Try a quick 15-minute practice session.</p>
+                    <button onclick="askAI()">Practice Now →</button>
+                </div>
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <button onclick="askAI()">🤖 Ask LearnLoop AI</button>
+                    <button onclick="goToLearn()">📚 Explore Subjects</button>
+                    <button onclick="examMode()">🚨 Exam Mode</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
