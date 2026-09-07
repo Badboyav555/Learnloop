@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LearnLoop</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a><a href="learn.html">Learn</a><a href="challenge.html">Challenge</a><a href="progress.html" class="active-link">Progress</a>
+        </nav>
+        <div class="profile-circle">S</div>
+    </header>
+    <main class="progress-container">
+        <section class="progress-header">
+            <div>
+                <p class="small-heading">YOUR LEARNING JOURNEY</p>
+                <h1>Progress & Achievements 🏆</h1>
+                <p>Track your growth, celebrate your achievements, and keep improving every day.</p>
+            </div>
+            <div class="progress-streak">🔥 7 Day Streak</div>
+        </section>
+        <section class="progress-section">
+            <h2>Overall Progress 📊</h2>
+            <div class="progress-overview">
+                <div class="overall-progress-card">
+                    <div class="circle-progress"><strong>72%</strong><span>Overall</span></div>
+                    <div><h3>Great progress! 🎉</h3><p>You are making steady progress. Keep learning consistently.</p></div>
+                </div>
+                <div class="progress-stat"><span>Lessons Completed</span><strong>12</strong></div>
+                <div class="progress-stat"><span>Quiz Accuracy</span><strong>83%</strong></div>
+                <div class="progress-stat"><span>Study Time</span><strong>8.5 hrs</strong></div>
+            </div>
+        </section>
+        <section class="progress-section">
+            <h2>Subject-wise Progress 📚</h2>
+            <div class="subject-progress-list">
+                <div class="subject-progress-card">
+                    <div class="subject-progress-info"><strong>📐 Engineering Mathematics</strong><span>72%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width: 72%;"></div></div>
+                </div>
+                <div class="subject-progress-card">
+                    <div class="subject-progress-info"><strong>⚡ Engineering Physics</strong><span>81%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width: 81%;"></div></div>
+                </div>
+                <div class="subject-progress-card">
+                    <div class="subject-progress-info"><strong>💻 Programming</strong><span>64%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width: 64%;"></div></div>
+                </div>
+            </div>
+        </section>
+        <section class="progress-section">
+            <h2>Achievements 🏆</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">🔥</div><h3>7 Day Streak</h3><p>Studied for 7 consecutive days.</p><span class="achievement-status">Unlocked</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">🎯</div><h3>Quiz Master</h3><p>Achieved more than 80% quiz accuracy.</p><span class="achievement-status">Unlocked</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-icon">📚</div><h3>First 10 Lessons</h3><p>Completed your first 10 lessons.</p><span class="achievement-status">Unlocked</span>
+                </div>
+                <div class="achievement-card locked">
+                    <div class="achievement-icon">🔒</div><h3>30 Day Legend</h3><p>Maintain a 30-day learning streak.</p><span class="achievement-status">Locked</span>
+                </div>
+            </div>
+        </section>
+        <section class="profile-section">
+            <div class="profile-avatar">S</div>
+            <div class="profile-details">
+                <h2>Student Profile</h2><p>B.Tech • CSE-IoT • First Year</p><span>🎯 Goal: Improve Concepts</span>
+            </div>
+            <button class="profile-btn" onclick="showProfileMessage()">View Profile</button>
+        </section>
+    </main>
+    <div id="profileOverlay" class="profile-overlay">
+        <div class="profile-popup">
+            <button class="close-popup" onclick="closeProfileMessage()">×</button>
+            <h2>👤 Student Profile</h2>
+            <p>Name: Student</p><p>Branch: CSE-IoT</p><p>Year: First Year</p><p>Goal: Improve Concepts</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
