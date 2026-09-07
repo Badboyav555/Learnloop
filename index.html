@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoop | Personalized Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Learn<span>Loop</span></div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <button class="login-btn" onclick="openLogin()">Login</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="tagline">PERSONALIZED • SMART • ADAPTIVE</p>
+                <h1>Learn Smarter.<br><span>Grow Every Day.</span></h1>
+                <p class="hero-description">LearnLoop is your personalized learning companion that helps you learn, practice, track progress, and prepare smarter for exams.</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="openLogin()">Get Started →</button>
+                    <button class="secondary-btn" onclick="openLogin()">I'm a Student</button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="card-header"><span>🔥</span><strong>Learning Streak</strong></div>
+                <div class="streak-number">7</div>
+                <p>Days in a row</p>
+                <div class="streak-days"><span>✓</span><span>✓</span><span>✓</span><span>✓</span><span>✓</span><span>✓</span><span>🔥</span></div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Everything you need to learn better</h2>
+            <div class="feature-container">
+                <div class="feature-card"><div class="feature-icon">🤖</div><h3>AI Study Assistant</h3><p>Get simple, personalized explanations whenever you get stuck.</p></div>
+                <div class="feature-card"><div class="feature-icon">⚡</div><h3>Daily Challenges</h3><p>Practice regularly and identify your weak areas.</p></div>
+                <div class="feature-card"><div class="feature-icon">🎯</div><h3>Personalized Learning</h3><p>Learn according to your goals, progress and available time.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <button class="close-btn" onclick="closeLogin()">×</button>
+            
+            <div id="loginForm">
+                <h2>Welcome to LearnLoop</h2>
+                <p>Continue your learning journey.</p>
+                <form onsubmit="login(event)">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="submit" class="primary-btn login-submit">Login</button>
+                </form>
+                <p class="signup-text">New to LearnLoop? <a href="#" onclick="showSignup()" style="color:#5b5ce2; cursor:pointer;"><strong>Sign up</strong></a></p>
+            </div>
+
+            <div id="signupForm" style="display: none;">
+                <h2>Create Account</h2>
+                <p>Start your personalized learning today.</p>
+                <form onsubmit="signup(event)">
+                    <label>Email</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    <label>Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                    <button type="submit" class="primary-btn login-submit">Sign Up</button>
+                </form>
+                <p class="signup-text">Already have an account? <a href="#" onclick="showLogin()" style="color:#5b5ce2; cursor:pointer;"><strong>Login</strong></a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
