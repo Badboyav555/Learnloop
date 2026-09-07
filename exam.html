@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Mode | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LearnLoop</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a><a href="learn.html">Learn</a><a href="challenge.html">Challenge</a><a href="progress.html">Progress</a>
+        </nav>
+        <div class="profile-circle">S</div>
+    </header>
+    <main class="exam-container">
+        <section class="exam-header">
+            <div>
+                <p class="small-heading">PERSONALIZED PREPARATION</p>
+                <h1>Exam Mode 📝</h1>
+                <p>Prepare smarter with a focused revision plan based on your learning progress.</p>
+            </div>
+            <div class="exam-streak">🔥 7 Day Streak</div>
+        </section>
+        <section class="exam-section">
+            <h2>Choose Your Subject 📚</h2>
+            <div class="subject-selection">
+                <button class="exam-subject active" onclick="selectExamSubject(this, 'Mathematics')">
+                    <span>📐</span><div><strong>Engineering Mathematics</strong><small>72% Prepared</small></div>
+                </button>
+                <button class="exam-subject" onclick="selectExamSubject(this, 'Physics')">
+                    <span>⚡</span><div><strong>Engineering Physics</strong><small>81% Prepared</small></div>
+                </button>
+                <button class="exam-subject" onclick="selectExamSubject(this, 'Programming')">
+                    <span>💻</span><div><strong>Programming</strong><small>64% Prepared</small></div>
+                </button>
+            </div>
+        </section>
+        <section class="exam-section">
+            <h2>Preparation Overview 📊</h2>
+            <div class="exam-overview">
+                <div class="exam-overview-card"><span>Overall Preparation</span><strong>72%</strong><div class="exam-progress"><div class="exam-progress-fill" style="width:72%;"></div></div></div>
+                <div class="exam-overview-card"><span>Topics Completed</span><strong>8 / 12</strong></div>
+                <div class="exam-overview-card"><span>Revision Needed</span><strong>4 Topics</strong></div>
+            </div>
+        </section>
+        <section class="exam-section">
+            <div class="section-title-row"><div><h2>Important Topics ⭐</h2><p>Focus on these topics before your exam.</p></div></div>
+            <div class="topic-list">
+                <div class="important-topic high">
+                    <div class="topic-info"><span class="priority-dot"></span><div><strong>Eigenvalues & Eigenvectors</strong><small>High Priority • Needs Revision</small></div></div>
+                    <span class="priority-label">HIGH</span>
+                </div>
+                <div class="important-topic medium">
+                    <div class="topic-info"><span class="priority-dot"></span><div><strong>Matrices</strong><small>Medium Priority • Practice More</small></div></div>
+                    <span class="priority-label">MEDIUM</span>
+                </div>
+                <div class="important-topic low">
+                    <div class="topic-info"><span class="priority-dot"></span><div><strong>Differential Equations</strong><small>Low Priority • Almost Complete</small></div></div>
+                    <span class="priority-label">LOW</span>
+                </div>
+            </div>
+        </section>
+        <section class="exam-section">
+            <h2>Quick Revision ⚡</h2>
+            <div class="quick-revision">
+                <button onclick="showRevision('formulas')">📐 Important Formulas</button>
+                <button onclick="showRevision('concepts')">💡 Key Concepts</button>
+                <button onclick="showRevision('mistakes')">⚠️ Common Mistakes</button>
+            </div>
+        </section>
+        <section class="exam-action">
+            <div><h2>Ready to test yourself? 🚀</h2><p>Take a focused practice test based on your selected subject.</p></div>
+            <button class="primary-btn" onclick="startExamPractice()">Start Exam Practice →</button>
+        </section>
+    </main>
+    <div id="revisionOverlay" class="revision-overlay">
+        <div class="revision-popup">
+            <button class="close-popup" onclick="closeRevision()">×</button>
+            <h2 id="revisionTitle">Quick Revision</h2>
+            <p id="revisionText">Select a revision category to begin.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
