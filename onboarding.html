@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoop | Onboarding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="onboarding-body">
+    <header class="onboarding-header">
+        <div class="logo">Learn<span>Loop</span></div>
+        <p>Step 1 of 1</p>
+    </header>
+    <main class="onboarding-container">
+        <div class="onboarding-intro">
+            <p class="tagline">LET'S GET STARTED</p>
+            <h1>Welcome to LearnLoop 👋</h1>
+            <p>Tell us a little about yourself so we can personalize your learning journey.</p>
+        </div>
+        <section class="onboarding-card">
+            <div class="form-group">
+                <label>What year are you in?</label>
+                <select id="year">
+                    <option value="">Select your year</option>
+                    <option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option><option value="4">4th Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What's your branch?</label>
+                <select id="branch">
+                    <option value="">Select your branch</option>
+                    <option value="cse">Computer Science</option><option value="iot">CSE - IoT</option><option value="ece">Electronics & Communication</option><option value="me">Mechanical Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What do you want to learn?</label>
+                <p class="helper-text">Select all that apply</p>
+                <div class="selection-container">
+                    <button type="button" class="selection-btn" onclick="selectSubject(this)">📐 Mathematics</button>
+                    <button type="button" class="selection-btn" onclick="selectSubject(this)">⚛️ Physics</button>
+                    <button type="button" class="selection-btn" onclick="selectSubject(this)">💻 Programming</button>
+                    <button type="button" class="selection-btn" onclick="selectSubject(this)">⚡ Electronics</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>How much time can you study daily?</label>
+                <div class="selection-container">
+                    <button type="button" class="time-btn" onclick="selectTime(this)">30 min</button>
+                    <button type="button" class="time-btn" onclick="selectTime(this)">1 hour</button>
+                    <button type="button" class="time-btn" onclick="selectTime(this)">2 hours</button>
+                    <button type="button" class="time-btn" onclick="selectTime(this)">3+ hours</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>What's your main goal?</label>
+                <select id="goal">
+                    <option value="">Select your goal</option>
+                    <option value="concepts">Improve my concepts</option><option value="exams">Prepare for exams</option><option value="practice">Practice more</option><option value="grades">Improve my grades</option>
+                </select>
+            </div>
+            <button class="primary-btn continue-btn" onclick="saveOnboarding()">Continue →</button>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
