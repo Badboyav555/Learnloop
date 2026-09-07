@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Learn<span>Loop</span></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a><a href="learn.html">Learn</a><a href="challenge.html" class="active">Challenge</a><a href="progress.html">Progress</a>
+            <div class="profile-circle">S</div>
+        </div>
+    </nav>
+    <main class="challenge-container">
+        <section class="challenge-heading">
+            <div>
+                <p class="small-heading">DAILY PRACTICE</p>
+                <h1>Daily Challenge 🧠</h1>
+                <p>Test your knowledge, improve your accuracy and keep your learning streak alive.</p>
+            </div>
+            <div class="challenge-streak">🔥 7 Day Streak</div>
+        </section>
+        <section class="quiz-info">
+            <div>📚 <strong>Mixed Subjects</strong></div><div>📝 <strong>5 Questions</strong></div><div>⏱️ <strong>5 Minutes</strong></div><div>🎯 <strong>Medium</strong></div>
+        </section>
+        <section class="quiz-card" id="quizCard">
+            <div class="quiz-top">
+                <span id="questionNumber">Question 1 of 5</span><span class="timer" id="timer">⏱️ 05:00</span>
+            </div>
+            <div class="quiz-progress"><div id="quizProgress" class="quiz-progress-fill"></div></div>
+            <div class="question-area">
+                <p class="question-subject" id="questionSubject">Mathematics</p>
+                <h2 id="questionText">Loading question...</h2>
+                <div class="options" id="optionsContainer"></div>
+            </div>
+            <div id="answerFeedback" class="answer-feedback"></div>
+            <button id="nextButton" class="next-question-btn" onclick="nextQuestion()">Next Question →</button>
+        </section>
+        <section class="result-card" id="resultCard">
+            <div class="result-icon">🏆</div>
+            <p class="small-heading">CHALLENGE COMPLETE</p>
+            <h1>Great Job! 🎉</h1>
+            <p id="resultMessage">You completed today's challenge.</p>
+            <div class="score-circle"><span id="finalScore">0/5</span></div>
+            <div class="result-stats">
+                <div><strong id="correctAnswers">0</strong><span>Correct</span></div>
+                <div><strong id="wrongAnswers">0</strong><span>Wrong</span></div>
+                <div><strong id="accuracy">0%</strong><span>Accuracy</span></div>
+            </div>
+            <div class="streak-success">🔥<strong>7-Day Streak Maintained!</strong><p>Come back tomorrow to make it 8 days.</p></div>
+            <div class="result-buttons">
+                <button onclick="restartQuiz()" class="retry-btn">🔄 Try Again</button>
+                <button onclick="window.location.href='dashboard.html'" class="dashboard-btn">← Dashboard</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
