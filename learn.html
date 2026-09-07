@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn | LearnLoop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Learn<span>Loop</span></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a><a href="learn.html" class="active">Learn</a><a href="challenge.html">Challenge</a><a href="progress.html">Progress</a>
+            <div class="profile-circle">S</div>
+        </div>
+    </nav>
+    <main class="learn-container">
+        <section class="learn-heading">
+            <div>
+                <p class="small-heading">YOUR LEARNING SPACE</p>
+                <h1>Learn at Your Own Pace 📚</h1>
+                <p>Explore your subjects, revise concepts, access notes and practice what you learn.</p>
+            </div>
+            <div class="streak-mini">🔥 <strong>1</strong> Day Streak</div>
+        </section>
+        <section class="subjects-section">
+            <h2>My Subjects</h2>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="subject-icon">📐</div><h3>Engineering Mathematics</h3><p>0% Completed</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <button class="learn-btn" onclick="showTopics('mathematics')">Explore Subject →</button>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon">⚡</div><h3>Engineering Physics</h3><p>0% Completed</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <button class="learn-btn" onclick="showTopics('physics')">Explore Subject →</button>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon">💻</div><h3>Programming</h3><p>0% Completed</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <button class="learn-btn" onclick="showTopics('programming')">Explore Subject →</button>
+                </div>
+            </div>
+        </section>
+        <section class="topics-section" id="topicsSection">
+            <div class="section-header">
+                <div><p class="small-heading">CONTINUE LEARNING</p><h2 id="topicTitle">Engineering Mathematics</h2></div>
+                <span class="topic-count">3 Topics</span>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <div class="topic-number">01</div>
+                    <div class="topic-content">
+                        <h3>Matrices</h3><p>Learn the basics of matrices, operations and important concepts.</p>
+                        <div class="topic-actions">
+                            <button onclick="openLearning('Matrices')">📖 Learn</button>
+                            <button onclick="openNotes('Matrices')">📝 Notes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-number">02</div>
+                    <div class="topic-content">
+                        <h3>Eigenvalues & Eigenvectors</h3><p>Understand eigenvalues, eigenvectors and their applications.</p>
+                        <div class="topic-actions">
+                            <button onclick="openLearning('Eigenvalues')">📖 Learn</button>
+                            <button onclick="openNotes('Eigenvalues')">📝 Notes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-number">03</div>
+                    <div class="topic-content">
+                        <h3>Differential Equations</h3><p>Explore basic differential equations and methods of solving them.</p>
+                        <div class="topic-actions">
+                            <button onclick="openLearning('Differential Equations')">📖 Learn</button>
+                            <button onclick="openNotes('Differential Equations')">📝 Notes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="learning-tools">
+            <h2>Learning Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-icon">📝</div><h3>Handwritten Notes</h3><p>Access clear and useful handwritten notes for quick revision.</p><button onclick="openNotes('General')">View Notes →</button></div>
+                <div class="tool-card"><div class="tool-icon">🎥</div><h3>Learning Resources</h3><p>Find useful videos and resources for difficult concepts.</p><button onclick="showResourceMessage()">Explore Resources →</button></div>
+                <div class="tool-card"><div class="tool-icon">🧠</div><h3>Practice</h3><p>Test your understanding with topic-wise practice questions.</p><button onclick="goToPractice()">Start Practice →</button></div>
+            </div>
+        </section>
+        <section class="smart-tip">
+            <div class="tip-icon">💡</div>
+            <div><h3>LearnLoop Smart Tip</h3><p>Don't just read a concept. Learn it, practice it and revise it. Consistency builds your streak!</p></div>
+        </section>
+    </main>
+    <div class="learn-popup" id="learnPopup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closeLearnPopup()">×</button>
+            <div id="popupIcon">📖</div>
+            <h2 id="popupTitle">Learning</h2>
+            <p id="popupMessage">Your learning content will appear here.</p>
+            <button class="popup-main-btn" onclick="closeLearnPopup()">Got it !</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
