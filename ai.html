@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoop AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Learn<span>Loop</span></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a><a href="learn.html">Learn</a><a href="challenge.html">Challenge</a><a href="progress.html">Progress</a>
+            <div class="profile-circle">S</div>
+        </div>
+    </nav>
+    <main class="ai-container">
+        <section class="ai-heading">
+            <div>
+                <p class="small-heading">YOUR PERSONAL STUDY ASSISTANT</p>
+                <h1>Meet LearnLoop AI 🤖</h1>
+                <p>Stuck on a concept? Ask your doubt and LearnLoop AI will help you understand it.</p>
+            </div>
+            <div class="ai-status">🟢 AI Tutor Online</div>
+        </section>
+        <section class="ai-card">
+            <div class="ai-card-header">
+                <div class="ai-avatar">🤖</div>
+                <div><h2>LearnLoop AI Tutor</h2><p>Ask me anything about your subjects.</p></div>
+            </div>
+            <div class="ai-section">
+                <label>Choose a subject</label>
+                <select id="aiSubject">
+                    <option value="">Select Subject</option>
+                    <option value="mathematics">Engineering Mathematics</option>
+                    <option value="physics">Engineering Physics</option>
+                    <option value="programming">Programming</option>
+                </select>
+            </div>
+            <div class="ai-section">
+                <label>Try a quick question</label>
+                <div class="quick-questions">
+                    <button onclick="quickQuestion('What is a matrix?')">What is a matrix?</button>
+                    <button onclick="quickQuestion('What are eigenvalues?')">What are eigenvalues?</button>
+                    <button onclick="quickQuestion('What is a variable in C?')">What is a variable in C?</button>
+                </div>
+            </div>
+            <div class="ai-section">
+                <label>Your question</label>
+                <textarea id="aiQuestion" placeholder="Type your doubt here..." rows="4"></textarea>
+            </div>
+            <button class="ask-ai-btn" onclick="askLearnLoopAI()">✨ Ask LearnLoop AI</button>
+            <div class="ai-response" id="aiResponse">
+                <div class="response-header">
+                    <span>🤖 LearnLoop AI</span><span class="response-tag">AI Tutor</span>
+                </div>
+                <p id="responseText">Your AI explanation will appear here.</p>
+                <div class="ai-followups">
+                    <button onclick="explainSimply()">💡 Explain More Simply</button>
+                    <button onclick="giveExample()">📌 Give Example</button>
+                    <button onclick="givePractice()">🧠 Practice Question</button>
+                </div>
+            </div>
+        </section>
+        <section class="ai-features">
+            <h2>What can LearnLoop AI do?</h2>
+            <div class="ai-feature-grid">
+                <div class="ai-feature-card"><div>💡</div><h3>Explain Concepts</h3><p>Get difficult concepts explained in simple language.</p></div>
+                <div class="ai-feature-card"><div>📌</div><h3>Give Examples</h3><p>Understand concepts through practical examples.</p></div>
+                <div class="ai-feature-card"><div>🧠</div><h3>Generate Practice</h3><p>Get practice questions based on the topic you're learning.</p></div>
+            </div>
+        </section>
+        <section class="ai-tip">
+            <span>🔥</span>
+            <p><strong>Study Tip:</strong> Don't be afraid to ask basic questions. LearnLoop AI is here to help you learn, not judge you.</p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
